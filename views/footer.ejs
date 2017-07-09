@@ -1,0 +1,13 @@
+<% var jsRoute = '/javascripts/' + title + '.js' %>
+
+<div class="footer">
+	<div class="footer-content">
+		© 2017 IFE
+	</div>
+</div>
+<% if (title) { %>
+<script src="<%= jsRoute %>">
+</script>
+<% } %>
+</body>
+</html>

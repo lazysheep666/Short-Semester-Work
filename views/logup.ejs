@@ -1,0 +1,46 @@
+<%- include header %>
+<div class="main">
+	<div class="log-container">
+		<div class="log-header">
+
+		</div>
+			<form class="log-content" action="/logup" method="post">
+				<label class="log-item">
+				 Username
+				 <div class="">
+					<input type="text" name="usn" value="">
+					<div class="log-msg" style="display: none">
+					username error
+					</div>
+					<% if (isExisted) { %>
+						<div class="log-msg">
+						existed
+						</div>
+					<% } %>
+				 </div>
+			 </label>
+			 <label class="log-item">
+				 Password
+				 <div class="">
+					<input type="text" name="pswd" value="">
+					<div class="log-msg" style="display: none">
+					password error
+					</div>
+				 </div>
+			 </label>
+			 <label class="log-item">
+				 Password Again
+				 <div class="">
+					<input type="text" name="pswda" value="">
+					<div class="log-msg" style="display: none">
+					twice different
+					</div>
+				 </div>
+			 </label>
+		<div class="log-item">
+			<button class="sub-btn" type="submit" name="button" >Logup</button>
+		</div>
+		</form>
+	</div>
+</div>
+<%- include footer %>

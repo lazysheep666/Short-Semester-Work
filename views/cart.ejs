@@ -1,0 +1,34 @@
+<%- include header %>
+<% var total = 0 %>
+<div class="main">
+	<div class="cart-header">
+		<img src="https://store.storeimages.cdn-apple.com/8750/as-images.apple.com/is/image/AppleInc/aos/published/images/d/el/delivery/message/delivery-message-banner?wid=38&amp;hei=42&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1478022116198"
+		width="19" height="21" alt="">
+		免费送货，还可免费退货。
+	</div>
+	<div class="cart-content clear-fix">
+		<h1>购物袋内的产品</h1>
+		<hr>
+	<% products.forEach(function (product, index) { %>
+		<% total += product.price %>
+		<div class="cart-item">
+			<img src="<%= product.img %>" alt="" width="110" height="110">
+			<div class="cart-item-con">
+			  <div class="cart-item-de">
+				  <p> <%= product.name %> </p>
+					<span>RMB <%= product.price %></span>
+					<span> x1 </span>
+			  </div>
+				<div class="cart-item-day">
+					送达日期：1周
+				</div>
+			</div>
+		</div>
+	<% }) %>
+	<div class="cart-buy"style="float:right">
+		总计 RMB <%= total %>
+		<button type="button" name="submit" class="buy-btn">结账</button>
+	</div>
+	</div>
+</div>
+<%- include footer %>

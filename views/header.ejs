@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo-container">
+      <div class="logo"></div>
+    </div>
+    <div class="nav-container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="/">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="/product">PRODUCT<span class="nav-item-icon"></span></a>
+          <div class="nav-sub">
+            <div class="nav-sub-item">
+              <a href="/product/computer">
+                Good Computer
+              </a>
+            </div>
+            <div class="nav-sub-item">
+              <a href="/product/phone">
+                Good Phone
+              </a>
+            </div>
+            <div class="nav-sub-item">
+              <a href="/product/pad">
+                Good Pad
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="/cart">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about">ABOUT <span class="nav-item-icon"></span></a>
+          <div class="nav-sub">
+            <div class="nav-sub-item">
+              <a href="/join">
+                Join Us
+              </a>
+            </div>
+            <div class="nav-sub-item">
+              <a href="/about">About Us</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav-log">
+        <% if (user) { %>
+          <li class="log-in"><a href="javascript:void(0)">hello <%= user.name %></a></li>
+          <li class="log-in"><a href="/logout">Quit</a></li>
+        <%} else { %>
+          <li class="log-in"><a href="/login">Login</a></li>
+          <li class="log-up"><a href="/logup">Logup</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="banner-text-container">
+      <img src="https://raw.githubusercontent.com/lazysheep666/efe-task/master/phase2/img/banner-left.gif"
+      alt="banner" height="260" width="760">
+      <div class="banner-text">
+        <div class="opcity-text">
+          <p>We Try</p>
+          <p>Our Best</p>
+        </div>
+        <h1>To Give You</h1>
+        <h1>Best Product</h1>
+      </div>
+    </div>
+    <div class="banner-pic-container">
+      <img src="https://raw.githubusercontent.com/lazysheep666/efe-task/master/phase2/img/banner.gif"
+      alt="banner" height="260" width="760" class="pic" >
+    </div>
+  </div>

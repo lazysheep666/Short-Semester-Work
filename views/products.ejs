@@ -1,0 +1,20 @@
+<%- include header -%>
+<div class="main">
+	<div class="prodcut-container">
+		<% products.forEach(function (product, index) { %>
+			<div class="product-item">
+				<img src=<%= product.img %> alt="" width="144" height="171">
+				<h1><%= product.name %></h1>
+				<p><%= product.content1 %></p>
+				<p><%= product.content2 %></p>
+				<p><%= product.content3 %></p>
+				<p><%= product.content4 %></p>
+				<p><%= product.content5 %></p>
+				<p><%= product.content6 %></p>
+				<h1>RMB <%= product.price %></h1>
+					<a href="/cart/<%= product.name %>">加入购物车</a>
+			</div>
+		<% }) %>
+	</div>
+</div>
+<%- include footer -%>

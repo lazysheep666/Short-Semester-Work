@@ -1,0 +1,36 @@
+<%- include header %>
+<div class="main">
+	<div class="log-container">
+		<div class="log-header">
+
+		</div>
+			<form class="log-content" action="/login" method="post">
+				<label class="log-item">
+				 Username
+				 <div class="">
+					<input type="text" name="usn" value="">
+					<% if (!isUsnOk) { %>
+						<div class="log-msg">
+						username error
+						</div>
+					<% } %>
+				 </div>
+			 </label>
+			 <label class="log-item">
+				 Password
+				 <div class="">
+					<input type="text" name="pswd" value="">
+					<% if (!isPswdOk) { %>
+						<div class="log-msg">
+						password error
+						</div>
+					<% } %>
+				 </div>
+			 </label>
+		<div class="log-item">
+			<button class="sub-btn" type="submit" name="button">Login</button>
+		</div>
+		</form>
+	</div>
+</div>
+<%- include footer %>
