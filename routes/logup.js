@@ -12,6 +12,7 @@ router.get('/', middlewares.checkNotLogin, function(req, res, next) {
 });
 
 router.post('/', middlewares.checkNotLogin, function (req, res) {
+  console.log(req.body);
   var name = req.body.usn;
   var password = req.body.pswd;
   console.log(name);

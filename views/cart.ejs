@@ -6,7 +6,7 @@
 		width="19" height="21" alt="">
 		免费送货，还可免费退货。
 	</div>
-	<div class="cart-content clear-fix">
+	<form class="cart-content clear-fix" action="/cart/buy" method="post">
 		<h1>购物袋内的产品</h1>
 		<hr>
 	<% products.forEach(function (product, index) { %>
@@ -16,19 +16,21 @@
 			<div class="cart-item-con">
 			  <div class="cart-item-de">
 				  <p> <%= product.name %> </p>
-					<span>RMB <%= product.price %></span>
-					<span> x1 </span>
+					<span class="cart-item-price">RMB <%= product.price %></span>
+					<input class="cart-item-num" type="text" name="num<%= index %>" value="1">
+					<span class="cart-item-total">RMB <%=product.price %></span>
 			  </div>
 				<div class="cart-item-day">
 					送达日期：1周
 				</div>
+				<a class="delete-item" href="/cart/delete/<%= product.name %>">删除</a>
 			</div>
 		</div>
 	<% }) %>
 	<div class="cart-buy"style="float:right">
-		总计 RMB <%= total %>
-		<button type="button" name="submit" class="buy-btn">结账</button>
+		<span class="cart-total">总计 RMB <%= total %></span>
+	  <button class="buy-btn" type="submit" name="button">结账</button>
 	</div>
-	</div>
+</form>
 </div>
 <%- include footer %>

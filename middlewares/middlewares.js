@@ -10,5 +10,11 @@ module.exports = {
       res.redirect('back');//返回之前的页面
     }
     next();
+  },
+  checkHasProduct: function (req, res, next) {
+    if (!req.session.products.length) {
+      res.redirect('/product');
+    }
+    next();
   }
 }
