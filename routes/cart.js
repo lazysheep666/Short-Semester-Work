@@ -11,6 +11,7 @@ router.get('/', middlewares.checkLogin, function(req, res, next) {
     products: req.session.products
   });
 });
+
 router.get('/product/:product', function (req, res, next) {
   Product.findOne({
     'name': req.params.product

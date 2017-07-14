@@ -452,9 +452,10 @@ ul {
 }
 .prodcut-container {
   display: flex;
+  flex-flow: row wrap;
 }
 .product-item {
-  flex: 1 0 0;
+  flex-basis: 31%;
   padding: 0 10px;
   border-right: 2px solid #d6d6d6;
 }
@@ -525,6 +526,17 @@ ul {
   display: block;
   width: 95px;
   height: 42px;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 42px;
+  color:#fff;
+  background: linear-gradient(#42a1ec,#0070c9);
+}
+.delete-btn {
+  display: block;
+  width: 40px;
+  height: 20px;
   border: 0;
   border-radius: 5px;
   text-align: center;

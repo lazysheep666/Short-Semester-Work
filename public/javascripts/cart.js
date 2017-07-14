@@ -8,7 +8,7 @@ function changeNum(event) {
 	let val = event.currentTarget
 								 .previousElementSibling
 								 .innerText;
-	if (/^[1-9]+$/.test(num)) {
+	if (/^[1-9]\d*$/.test(num)) {
 		val = parseInt(val.split(' ')[1], 10);
 		let totalVal = parseInt(num, 10) * val;
 		event.currentTarget
@@ -28,6 +28,14 @@ function changeNum(event) {
 		event.currentTarget
 		     .nextElementSibling
 				 .innerText = val;
+
+		let allTotalVal = 0;
+		const CART_ITEM_TOTAL = document.getElementsByClassName('cart-item-total');
+		for (let i = 0; i < CART_ITEM_TOTAL.length; i++) {
+		 	allTotalVal += parseInt(CART_ITEM_TOTAL[i].innerText.split(' ')[1], 10);
+		 }
+		 document.getElementsByClassName('cart-total')[0]
+		 		     .innerText = '总计 RMB ' + allTotalVal;
 	}
 }
 
