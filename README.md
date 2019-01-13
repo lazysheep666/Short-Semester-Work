@@ -9,7 +9,7 @@
 4. session
 
 ## Usage:
-1. git clone https://github.com/lazysheep666/Short-Semester-Work
+1. git clone git@github.com:lazysheep666/Short-Semester-Work.git
 2. npm install
 3. making sure you have opened the database, which name is app.
 4. node app.js
