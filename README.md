@@ -10,5 +10,6 @@
 
 ## Usage:
 1. git clone https://github.com/lazysheep666/Short-Semester-Work
-2. npm i
-3. the database name is 'app'
+2. npm install
+3. making sure you have opened the database, which name is app.
+4. node app.js
